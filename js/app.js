@@ -68,28 +68,11 @@ const onSubmit = () => {
     return;
   }
   if (
+    switchesState.blockPing &&
     finalClasses.includes("content") &&
-    validate(args.content, "Treść", (blockedWords = ["@everyone", "@here"]))
+    validate(args.content, "Treść", 4, 200, ["@everyone", "@here"])
   ) {
     document.querySelector(`#content`).style = styles.errorInputStyle;
-    return;
-  }
-  if (
-    finalClasses.includes("embedTitle") &&
-    validate(args.embedTitle, "Tytuł", (blockedWords = ["@everyone", "@here"]))
-  ) {
-    document.querySelector(`#embedTitle`).style = styles.errorInputStyle;
-    return;
-  }
-  if (
-    finalClasses.includes("embedContent") &&
-    validate(
-      args.embedContent,
-      "Treść",
-      (blockedWords = ["@everyone", "@here"])
-    )
-  ) {
-    document.querySelector(`#embedContent`).style = styles.errorInputStyle;
     return;
   }
 
@@ -175,12 +158,17 @@ const onCheckEmbed = () => {
     ? styles.hide
     : styles.show;
 
+  document.querySelector(`#is-blocking-ping-container`).style =
+    !switchesState.embed ? styles.hide : "";
+
   !switchesState.embed &&
     (document.querySelector(`#customEmbedColor`).style = styles.hide);
 
   switchesState.embed &&
     switchesState.customColor &&
     customColorSwitchDiv.click();
+
+  !switchesState.embed && switchesState.blockPing && blockPingSwitchDiv.click();
   switchesState.embed = !switchesState.embed;
 };
 
