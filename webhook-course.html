@@ -1,0 +1,80 @@
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dcord Hook</title>
+    <meta
+      name="description"
+      content="Dcord Hook - szybkie i intuicyjne wysyłanie wiadomości przez discord webhooka"
+    />
+    <meta
+      name="keywords"
+      content="webhook, Dcord, chat, wiadomości, embed, wyślij, hook, web, panel"
+    />
+    <link rel="stylesheet" href="./dist/css/webhook-course.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <p class="navbar__title">Dcord Hook</p>
+      <div class="navbar__items" id="navbar-items">
+        <a href="" class="navbar__item">Strona główna</a>
+        <a href="" class="navbar__item">Panel wysyłania</a>
+        <a href="" target="_blank" class="navbar__item">Serwer discord</a>
+      </div>
+      <input
+        type="checkbox"
+        class="navbar__burger__checkbox"
+        id="navbar-checkbox"
+      />
+      <label class="navbar__burger" id="navbar-burger" for="navbar-checkbox">
+        <span class="navbar__burger__center"></span>
+      </label>
+    </nav>
+    <section class="info">
+      <h1 class="info__title">Jak stworzyć webhooka?</h1>
+      <div class="info__description">
+        <div class="info__description__item info__description__item--right">
+          <img src="./img/instr1.png" alt="" class="info__description__img" />
+          <p class="info__description__item__text">
+            Przejdź na swój serwer i wejdź w ustawienia wybranego kanału kanału.
+          </p>
+        </div>
+        <div class="info__description__item">
+          <p>
+            Wybierz opcje <span class="info__highlight">Integracje</span>, a
+            następnie <span class="info__highlight">Tworzenie webhooka</span>.
+          </p>
+
+          <img src="./img/instr2.png" alt="" class="info__description__img" />
+        </div>
+        <div
+          class="
+            info__description__item
+            info__description__item--right
+            info__description__item--grow
+          "
+        >
+          <img src="./img/instr3.png" alt="" class="info__description__img" />
+          <p>
+            <span class="form__success">Gotowe!</span>
+            Możesz teraz skopiować link używając
+            <span class="info__highlight">Skopiuj adres URL webhoka</span> i
+            wysłać wiadomość poprzez
+            <a class="info__link" href="/">nasz panel</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer footer--change-position">
+      2021 &copy
+      <a class="footer__link" title="Discord server" href="">Adameq</a>
+    </footer>
+  </body>
+  <script src="./js/components/burger.js"></script>
+  <script src="./js/components/resize.js"></script>
+</html>

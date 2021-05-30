@@ -1,0 +1,154 @@
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dcord Hook</title>
+    <meta
+      name="description"
+      content="Dcord Hook - szybkie i intuicyjne wysyłanie wiadomości przez discord webhooka"
+    />
+    <meta
+      name="keywords"
+      content="webhook, Dcord, chat, wiadomości, embed, wyślij, hook, web, panel"
+    />
+    <link rel="stylesheet" href="./dist/css/app.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <p class="navbar__title">Dcord Hook</p>
+      <div class="navbar__items" id="navbar-items">
+        <a href="" class="navbar__item">Strona główna</a>
+        <a href="" class="navbar__item">Jak stworzyć webhooka</a>
+        <a href="" target="_blank" class="navbar__item">Serwer discord</a>
+      </div>
+      <input
+        type="checkbox"
+        class="navbar__burger__checkbox"
+        id="navbar-checkbox"
+      />
+      <label class="navbar__burger" id="navbar-burger" for="navbar-checkbox">
+        <span class="navbar__burger__center"></span>
+      </label>
+    </nav>
+    <section class="form">
+      <input
+        type="text"
+        placeholder="Link webhooka"
+        class="form__input"
+        id="token"
+        autocomplete="off"
+      />
+      <input
+        type="text"
+        placeholder="Link do avatara (opcjonalne)"
+        class="form__input"
+        id="avatar_link"
+        autocomplete="off"
+      />
+      <input
+        type="text"
+        placeholder="Nick"
+        id="username"
+        class="form__input"
+        autocomplete="off"
+      />
+      <textarea
+        type="text"
+        placeholder="Treść"
+        class="form__input form__input--textarea"
+        id="content"
+        autocomplete="off"
+      ></textarea>
+      <div class="form__embed" id="embed" style="display: none">
+        <p>Informacje embeda</p>
+        <input
+          type="text"
+          placeholder="Tytuł"
+          id="embedTitle"
+          class="form__input form__embed__input"
+          autocomplete="off"
+        />
+        <textarea
+          type="text"
+          placeholder="Treść"
+          class="form__input form__input--textarea form__embed__input"
+          id="embedContent"
+          autocomplete="off"
+        ></textarea>
+        <select id="embedColor" class="form__input form__embed__input">
+          <option value="none" selected hidden>Wybierz kolor</option>
+          <option value="0">Czarny</option>
+          <option value="1752220">Turkusowy</option>
+          <option value="1146986">Ciemny turkusowy</option>
+          <option value="3066993">Zielony</option>
+          <option value="2067276">Ciemny zielony</option>
+          <option value="12370112">Jasny niebieski</option>
+          <option value="3447003">Niebieski</option>
+          <option value="2123412">Ciemny niebieski</option>
+          <option value="3426654">Granatowy</option>
+          <option value="10181046">Fioletowy</option>
+          <option value="15844367">Złoty</option>
+          <option value="15105570">Pomarańczowy</option>
+          <option value="15158332">Czerwony</option>
+          <option value="10038562">Ciemny czerwony</option>
+          <option value="9807270">Szary</option>
+          <option value="9936031">Ciemny szary</option>
+        </select>
+        <input
+          type="text"
+          placeholder="Własny kolor w systemie szesnastkowym"
+          id="customEmbedColor"
+          class="form__input form__embed__input"
+          autocomplete="off"
+        />
+        <span class="form__checkbox">
+          <label class="form__checkbox__label" id="checkbox2">
+            <input
+              type="checkbox"
+              class="form__checkbox__input"
+              id="is-custom-color"
+            />
+            <div class="form__checkbox__dot"></div> </label
+          >Własny kolor
+        </span>
+      </div>
+      <div class="form__checkboxes-container">
+        <span class="form__checkbox">
+          <label class="form__checkbox__label" id="checkbox">
+            <input
+              type="checkbox"
+              class="form__checkbox__input"
+              id="is-blocking-ping"
+            />
+            <div class="form__checkbox__dot"></div> </label
+          >Blokowanie pingu
+        </span>
+        <span class="form__checkbox">
+          <label class="form__checkbox__label" id="checkbox2">
+            <input
+              type="checkbox"
+              class="form__checkbox__input"
+              id="is-embed"
+            />
+            <div class="form__checkbox__dot"></div> </label
+          >Embed
+        </span>
+      </div>
+      <input type="button" class="form__submit" id="submit" value="Wyślij" />
+      <div class="form__success" id="success"></div>
+      <div class="form__error" id="error"></div>
+    </section>
+    <footer class="footer footer--change-position">
+      2021 &copy
+      <a class="footer__link" title="Discord server" href="">Adameq</a>
+    </footer>
+  </body>
+  <script src="./js/app.js"></script>
+
+  <script src="./js/components/burger.js"></script>
+  <script src="./js/components/resize.js"></script>
+</html>
