@@ -40,7 +40,7 @@ const switches = [...document.querySelectorAll(`.form__checkbox__label`)];
 const onSubmit = () => {
   finalClasses = classes;
 
-  if (switchesState.embed == true) {
+  if (switchesState.embed) {
     finalClasses.push("embedTitle");
     !switchesState.customColor
       ? finalClasses.push("embedColor")
